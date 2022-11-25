@@ -1,0 +1,56 @@
+.button {
+  display: block;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 12.5px;
+  background: #3E9CDC;
+  border: 1px solid #FFFFFF;
+  border-radius: 4px;
+  min-width: 183px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.15s ease-in all;
+  transition: 0.15s ease-in all;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.button:hover {
+  color: #3E9CDC;
+  background: #FFFFFF;
+  border: 1px solid #3E9CDC;
+}
+.button_white {
+  color: #2A2B30;
+  background: #FFFFFF;
+  border: 1px solid #6F6D7B;
+}
+.button_white:hover {
+  color: #FFFFFF;
+  background: #6F6D7B;
+  border: 1px solid #6F6D7B;
+}
+
+@media screen and (max-width: 992px) {
+  .button {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 10px;
+    border-radius: 4px;
+    min-width: 150px;
+  }
+}

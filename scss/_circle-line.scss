@@ -1,0 +1,214 @@
+.circle-line {
+    margin: 0 auto;
+    display: flex;
+    align-items: start;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100px;
+        gap: 20px;
+        margin: 0 15px;
+    }
+
+    &__item {
+        width: 100px;
+        height: 100px;
+        background: $BlueColor;
+        border: 5px solid #286690;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__text {
+        font-family: 'Lato', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFF;
+        width: 200px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__dots {
+        display: flex;
+        gap: 20px;
+        margin-top: 50px;
+        transform: translateY(-50%);
+
+        &-item {
+            width: 6px;
+            height: 6px;
+            background: #C4C4C4;
+            border-radius: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .circle-line {
+        &__wrapper {
+            width: 90px;
+            margin: 0 15px;
+            gap: 18px;
+        }
+
+        &__icon {
+            width: 35px;
+            height: 35px;
+        }
+
+        &__text {
+            width: 165px;
+        }
+
+        &__dots {
+            gap: 18px;
+            margin-top: 45px;
+
+            &-item {
+                &:last-child {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .circle-line {
+        &__wrapper {
+            width: 80px;
+            margin: 0 14px;
+            gap: 16px;
+        }
+
+        &__item {
+            width: 80px;
+            height: 80px;
+        }
+
+        &__icon {
+            width: 30px;
+            height: 30px;
+        }
+
+        &__text {
+            width: 150px;
+            font-size: 15px;
+            line-height: 17px;
+        }
+
+        &__dots {
+            gap: 16px;
+            margin-top: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .circle-line {
+        &__wrapper {
+            width: 70px;
+            margin: 0 15px;
+            gap: 5px;
+        }
+
+        &__item {
+            border: 4px solid #286690;
+        }
+
+        &__icon {
+            width: 25px;
+            height: 25px;
+        }
+
+        &__text {
+            width: 100px;
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        &__dots {
+            gap: 15px;
+            margin-top: 35px;
+
+            &-item {
+                &:first-child {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .circle-line {
+        flex-direction: column;
+        align-items: center;
+
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+            width: 120px;
+            margin: 0 15px;
+            gap: 5px;
+        }
+
+        &__item {
+            width: 120px;
+            height: 120px;
+            border: 7px solid #286690;
+        }
+
+        &__icon {
+            width: 35px;
+            height: 35px;
+        }
+
+        &__text {
+            font-size: 20px;
+            line-height: 24px;
+            width: 200px;
+            margin: 15px 0 0 0;
+        }
+
+        &__dots {
+            flex-direction: column;
+            gap: 28px;
+            margin: 25px 0;
+            transform: none;
+
+            &-item {
+                width: 8px;
+                height: 8px;
+                display: none;
+
+                &:first-child {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .circle-line {
+        &__wrapper {
+            width: 110px;
+            margin: 0 14px;
+        }
+
+        &__text {
+            font-size: 18px;
+            line-height: 22px;
+            width: 200px;
+        }
+    }
+}

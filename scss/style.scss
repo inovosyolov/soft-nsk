@@ -1,0 +1,30 @@
+$BlueColor: #3E9CDC;
+
+* {
+    box-sizing: border-box;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    display: block;
+}
+
+@import "header";
+@import "menu";
+@import "main-info";
+@import "description";
+@import "button";
+@import "making-order";
+@import "circle-line";
+@import "form";
+@import "select-menu";
+@import "range-slider";
+@import "footer";

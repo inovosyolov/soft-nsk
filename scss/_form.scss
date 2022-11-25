@@ -1,0 +1,138 @@
+.form {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    grid-template-areas:
+    "select  email  name"
+    "slider  slider file"
+    " .  submit-btn  .  ";
+
+    &__input {
+        font-family: 'Lato', sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        background: #DFDFE0;
+        border: 1px solid #DFDFE0;
+        border-radius: 3px;
+        padding: 12px 10px;
+        outline: none;
+
+        &-email {
+            grid-area: email;
+        }
+
+        &-name {
+            grid-area: name;
+        }
+
+        &::-webkit-input-placeholder {
+            color: #272733;
+        }
+
+        &::-moz-placeholder {
+            color: #272733;
+            opacity: 1;
+        }
+    }
+
+    &__file {
+        grid-area: file;
+
+        &-input {
+            display: none;
+        }
+
+        &-label {
+            height: 48px;
+            background: #FFF;
+            border: 2px solid #FFF;
+            border-radius: 3px;
+            font-family: 'Lato', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 18px;
+            text-transform: uppercase;
+            transition: .25s all;
+            color: #272733;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+
+            &-icon {
+                display: block;
+                height: 20px;
+                width: auto;
+                user-select: none;
+            }
+
+            &:hover {
+                border: 2px solid #272733;
+            }
+        }
+    }
+
+    &__button {
+        grid-area: submit-btn;
+        margin-top: 20px;
+        height: 48px;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 18px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .form {
+        gap: 20px;
+
+        &__button {
+            font-size: 15px;
+            line-height: 18px;
+        }
+
+        &__input {
+            font-size: 15px;
+            line-height: 18px;
+        }
+
+        &__file {
+            &-label {
+                font-size: 13px;
+                line-height: 18px;
+                gap: 8px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .form {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "name            email"
+                             "select           file"
+                             "slider         slider"
+                             "submit-btn submit-btn";
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .form {
+        align-self: center;
+        width: 80%;
+        grid-template-columns: 1fr;
+        grid-template-areas: "select"
+                             "name"
+                             "email"
+                             "file"
+                             "slider"
+                             "submit-btn"
+    }
+}
+
+
